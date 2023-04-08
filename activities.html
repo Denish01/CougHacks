@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      
+      .dropdown-container {
+        width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 2px 2px 5px #ccc;
+        text-align: center;
+        margin-bottom: 20px; /* added margin */
+      }
+      
+      .dropdown-container label {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      
+      select {
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Password Manager</h1>
+    <div class="dropdown-container">
+      <label for="activities">Choose an Activity:</label>
+      <select name="activities" id="activities" onchange="redirect()">
+        <option value="save"> ------------ </option>
+        <option value="save">Save an account and Password</option>
+      </select>
+      <br>
+      <input type="submit" value="Go">
+    </div>
+    <script>
+      function redirect() {
+        var activity = document.getElementById("activities").value;
+        if (activity === "save") {
+          window.location.href = "index.html";
+        } else if (activity === "retrieve") {
+          window.location.href = "retrieve.html";
+        }
+      }
+    </script>
+
+    <head>
+      <title>Password Manager - Notes</title>
+    </head>
+  </body>  
+
+  <body>
+
+      <main>
+        <h2>Take Notes</h2>
+        <style>
+          /* CSS for note-taking section */
+
+          main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #ccc;
+          }
+
+          h2 {
+            color: #333;
+            text-align: center;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+          }
+
+          label {
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          input[type="text"],
+          textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            font-size: 16px;
+          }
+
+          button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+
+          button[type="submit"]:hover {
+            background-color: #0056b3;
+          }
+        </style>
+  
+        <form>
+          <label for="note-title">Title:</label>
+          <input type="text" id="note-title" name="note-title" required><br>
+
+          <label for="note-content">Note:</label><br>
+          <textarea id="note-content" name="note-content" rows="10" cols="50"></textarea><br>
+
+          <button type="submit">Save Note</button>
+        </form>
+      </main>
+    </body>
+  
+</html>

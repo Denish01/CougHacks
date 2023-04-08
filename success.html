@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Manager - Success</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  #activity-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #activity-button:hover {
+    background-color: #3e8e41;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <h1>Success!</h1>
+    <p>Your account has been created.</p>
+    <button id="activity-button">Select Activity</button>
+  </div>
+  <script>
+    const activityButton = document.getElementById("activity-button");
+    activityButton.addEventListener("click", function() {
+      window.location.href = "activities.html";
+    });
+  </script>
+</body>
+</html>
